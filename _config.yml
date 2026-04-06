@@ -24,8 +24,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Just a random blog from random author
   Reverse engineering, strange engineering and so on!
 baseurl: "" # the subpath of your site, e.g. /blog
-domain: "blog.re146.dev"
-url: "https://blog.re146.dev" # the base hostname & protocol for your site, e.g. http://example.com
+domain: "b.re146.dev"
+url: "https://b.re146.dev" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  radioegor146
 
 # Build settings
