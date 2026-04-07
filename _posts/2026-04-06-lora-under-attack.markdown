@@ -11,7 +11,7 @@ author: radioegor146
 {:toc}
 
 
-## How it all started
+## How it all started 
 
 Some time ago, several of my friends became interested in Meshtastic. It is a really nice protocol and software for creating mesh networks, in which each device connects directly to other nearby devices. These networks use small devices for communication. LoRa, which stands for Long Range, was chosen as the main radio communication protocol and allows long-distance wireless transmission with low power consumption.
 
