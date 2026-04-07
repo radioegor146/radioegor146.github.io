@@ -1,0 +1,52 @@
+
+<meta charset="{{ site.encoding }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+{% seo %}
+{%- if site.show_minimal -%}
+<link rel="stylesheet" href="{{ "/assets/css/minimal.css" | relative_url }}">
+{%- elsif site.show_frame -%}
+<link rel="stylesheet" href="{{ "/assets/css/frame.css" | relative_url }}">
+{%- else -%}
+<link rel="stylesheet" href="{{ "/assets/css/index.css" | relative_url }}">
+{%- endif -%}
+<link rel="stylesheet" href="{{ "/assets/PT-Sans/index.css" | relative_url }}">
+{%- if site.plugins contains "jekyll-feed" -%}
+<link rel="alternate" href="{{ site.feed.path | default: "/feed.xml" | relative_url }}" type="application/atom+xml" title="{{ site.title }}">
+{%- endif -%}
+{%- if page.mathjax or site.mathjax -%}
+<link rel="stylesheet" href="{{ "/assets/katex/katex.min.css" | relative_url }}">
+{% unless site.plugins contains "jektex" %}
+<script defer src="{{ "/assets/katex/katex.min.js" | relative_url }}"></script>
+<script defer src="{{ "/assets/katex/contrib/auto-render.min.js" | relative_url }}" onload="renderMathInElement(document.body)"></script>
+{%- endunless -%}
+{%- endif -%}
+{%- if site.comments.disqus_shortname and page.layout == "post" -%}
+<script src="//{{ site.comments.disqus_shortname }}.disqus.com/embed.js" async></script>
+{%- endif -%}
+{%- if site.comments.isso_domain and page.layout == "post" -%}
+<script data-isso="http://{{ site.comments.isso_domain }}" src="//{{ site.comments.isso_domain }}/js/embed.min.js"></script>
+{%- endif -%}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L1TVWQHDH8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L1TVWQHDH8');
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108439542', 'ym');
+
+    ym(108439542, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108439542" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+{%- if site.show_sidebar %}{% include sidebar.html %}{% endif %}
