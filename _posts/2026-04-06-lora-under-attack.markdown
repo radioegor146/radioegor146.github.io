@@ -1584,7 +1584,7 @@ Also, Semtech recently released LR2021, and while it does not include flash, dum
 
 ## References
 
-1. [Main article repo](https://github.com/radioegor146/lr-security-research)
+1. [Main article repo](https://github.com/radioegor146/lr-semtech-research)
 2. [LR1121 User Manual](https://semtech.my.salesforce.com/sfc/p/E0000000JelG/a/RQ000005h0I1/uRUCgjGWaHW2B2wFchdm_w96ucy3g12TruwkrJkeBEE)
 3. [ARC (processor)](https://en.wikipedia.org/wiki/ARC_(processor))
 4. [Programmer's Reference Manual for ARC EM Processors (Public Edition)](https://www.synopsys.com/dw/doc.php/iip/DWC_ARC_EM/ARC_EM_PublicProgrammersReference.pdf)
